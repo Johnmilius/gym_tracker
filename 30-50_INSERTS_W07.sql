@@ -50,136 +50,11 @@ VALUES
     ('Tommy Ross', 'tommy.ross@example.com'),
     ('Ursula Long', 'ursula.long@example.com'),
     ('Vince Coleman', 'vince.coleman@example.com'),
+    ('Tommy Ross', 'tommy.ross@example.com'),
+    ('Tommy Ross', 'tommy.ross@example.com'),
+    ('Tommy Ross', 'tommy.ross@example.com'),
+    ('Tommy Ross', 'tommy.ross@example.com');
 
--- EXERCISE_CATEGORY (expand or repeat existing ones)
-INSERT INTO
-    `exercise_category` (`category_name`)
-VALUES
-    ('Chest'),
-    ('Back'),
-    ('Legs'),
-    ('Arms'),
-    ('Shoulders'),
-    ('Core'),
-    ('Cardio'),
-    ('Flexibility'),
-    ('Balance'),
-    ('Power'),
-    ('Endurance'),
-    ('Strength'),
-    ('Speed'),
-    ('Agility'),
-    ('Mobility'),
-    ('Plyometrics'),
-    ('Calisthenics'),
-    ('Bodybuilding'),
-    ('Olympic Lifts'),
-    ('Rehabilitation'),
-    ('Yoga'),
-    ('Pilates'),
-    ('CrossFit'),
-    ('HIIT'),
-    ('Martial Arts'),
-    ('Swimming'),
-    ('Running'),
-    ('Cycling'),
-    ('Rowing'),
-    ('Skiing'),
-    ('Dance'),
-    ('Gymnastics'),
-    ('Parkour'),
-    ('Climbing'),
-    ('Stretching'),
-    ('Aerobics'),
-    ('Powerlifting'),
-    ('Functional Training'),
-    ('TRX'),
-    ('Kettlebell'),
-    ('Medicine Ball'),
-    ('Resistance Band'),
-    ('Foam Rolling'),
-    ('Breathing'),
-    ('Isometrics'),
-    ('Core Stability'),
-    ('Dynamic Warmup'),
-    ('Cooldown'),
-    ('Mobility Drills'),
-    ('Speed Work');
-
--- EXERCISE (assign to some categories)
-INSERT INTO
-    `exercise` (`exercise_name`)
-VALUES
-    ('Barbell Bench Press'),
-    ('Squat'),
-    ('Deadlift'),
-    ('Pull-up'),
-    ('Push-up'),
-    ('Overhead Press'),
-    ('Dumbbell Curl'),
-    ('Tricep Dip'),
-    ('Lunge'),
-    ('Plank'),
-    ('Burpee'),
-    ('Jump Rope'),
-    ('Mountain Climber'),
-    ('Russian Twist'),
-    ('Leg Raise'),
-    ('Kettlebell Swing'),
-    ('Box Jump'),
-    ('Medicine Ball Slam'),
-    ('Battle Rope'),
-    ('Farmer''s Walk'),
-    ('Lat Pulldown'),
-    ('Cable Row'),
-    ('Hip Thrust'),
-    ('Glute Bridge'),
-    ('Calf Raise'),
-    ('Seated Row'),
-    ('Chest Fly'),
-    ('Incline Dumbbell Press'),
-    ('Romanian Deadlift'),
-    ('Leg Extension'),
-    ('Leg Curl'),
-    ('Dumbbell Shoulder Press'),
-    ('Arnold Press'),
-    ('Front Raise'),
-    ('Lateral Raise'),
-    ('Face Pull'),
-    ('Hammer Curl'),
-    ('Concentration Curl'),
-    ('Skull Crusher'),
-    ('Tricep Pushdown'),
-    ('Bicycle Crunch'),
-    ('Side Plank'),
-    ('Superman Hold'),
-    ('Dead Bug'),
-    ('Bird Dog'),
-    ('Jump Squat'),
-    ('Wall Sit'),
-    ('Step Up'),
-    ('Box Step Over'),
-    ('Sprint'),
-    -- Added from your data:
-    ('Seated Leg Curl'),
-    ('Standing Calves'),
-    ('Abdominal Machine Crunch'),
-    ('Machine Shoulder Press'),
-    ('Rope Tricep Extension'),
-    ('Rope Tricep Kickbacks'),
-    ('Pec Dec'),
-    ('Shrugs'),
-    ('Rear Deltoid Machine'),
-    ('Standing Barbell Shoulder Press'),
-    ('Shoulder Dumbbell Raise'),
-    ('Cable Back Curls'),
-    ('Machine Bicep Curl'),
-    ('Smith Machine Squat'),
-    ('Hip Adductions'),
-    ('Hip Abductions'),
-    ('Chest-Supported Machine Row'),
-    ('Smith Bench'),
-    ('Dumbbell Bench Press');
 
 -- PERSONAL_WEIGHT: 10 users with 10-15 weight records over ~2 months
 INSERT INTO
@@ -281,16 +156,6 @@ VALUES
     (10, 182.1, '2025-04-20'),
     (10, 182.5, '2025-04-27');
 
-INSERT INTO
-    subscriptions (price, subscription_name)
-VALUES
-    (0, 'Free Plan'),
-    (5.99, 'Monthly Basic'),
-    (9.99, 'Monthly Plus'),
-    (14.99, 'Monthly Premium'),
-    (59.99, 'Yearly Basic'),
-    (99.99, 'Yearly Plus'),
-    (149.99, 'Yearly Premium');
 
 -- SUBSCRIPTIONS_HAS_USER (each user has at least one subscription; some expired, some current)
 INSERT INTO
@@ -298,7 +163,9 @@ INSERT INTO
 VALUES
     -- User 1 - expired + current
     (1, 1, '2024-01-01', '2024-12-31'),
-    (2, 1, '2025-01-01', '2025-12-31'),
+    
+    -- (2, 1, '2025-01-01', '2025-12-31'),
+    
     -- User 2 - current only
     (3, 2, '2025-02-01', '2026-01-31'),
     -- User 3 - expired
@@ -307,7 +174,9 @@ VALUES
     (4, 4, '2025-03-15', '2026-03-14'),
     -- User 5 - expired + current
     (2, 5, '2024-06-01', '2025-05-31'),
-    (3, 5, '2025-06-01', '2026-05-31'),
+    
+    -- (3, 5, '2025-06-01', '2026-05-31'),
+    
     -- User 6 - expired only
     (1, 6, '2023-11-01', '2024-10-31'),
     -- User 7 - current
@@ -316,7 +185,9 @@ VALUES
     (6, 8, '2025-01-15', '2026-01-14'),
     -- User 9 - expired + current
     (2, 9, '2024-03-01', '2025-02-28'),
-    (3, 9, '2025-03-01', '2026-02-28'),
+    
+    -- (3, 9, '2025-03-01', '2026-02-28'),
+    
     -- User 10 - current only
     (1, 10, '2025-04-01', '2026-03-31'),
     -- Users 11-50 - assign monthly basic with no future start dates, spread out in past year
@@ -357,6 +228,4 @@ VALUES
     (1, 45, '2025-06-01', '2026-06-01'),
     (1, 46, '2025-06-07', '2026-06-07'), -- latest allowed date
     (1, 47, '2025-05-01', '2026-05-01'), -- rearranged to keep all <= today
-    (1, 48, '2025-05-15', '2026-05-15'),
-    (1, 49, '2025-04-01', '2026-04-01'),
-    (1, 50, '2025-04-15', '2026-04-15');
+    (1, 48, '2025-05-15', '2026-05-15');
