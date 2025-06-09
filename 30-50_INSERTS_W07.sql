@@ -1,6 +1,7 @@
 INSERT INTO
     `user` (`user_name`, `email`)
 VALUES
+    ('John Milius', 'jwmilius@gmail.com'),
     ('Alice Johnson', 'alice.johnson@example.com'),
     ('Bob Smith', 'bob.smith@example.com'),
     ('Carla Martinez', 'carla.martinez@example.com'),
@@ -49,7 +50,6 @@ VALUES
     ('Tommy Ross', 'tommy.ross@example.com'),
     ('Ursula Long', 'ursula.long@example.com'),
     ('Vince Coleman', 'vince.coleman@example.com'),
-    ('Willa Jenkins', 'willa.jenkins@example.com');
 
 -- EXERCISE_CATEGORY (expand or repeat existing ones)
 INSERT INTO

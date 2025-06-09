@@ -1,5 +1,5 @@
 -- WORKOUT SESSION (5 sessions)
-INSERT INTO workout_session (id, user_id, workout_date, notes) VALUES
+INSERT INTO workout_session (workout_session_id, user_id, workout_date, notes) VALUES
 (101, 3, '2025-02-05', 'Felt strong. Focused on upper body.'),
 (102, 3, '2025-02-10', 'Good pump, slight shoulder tightness.'),
 (103, 3, '2025-02-15', 'Progressing well on bench.'),
